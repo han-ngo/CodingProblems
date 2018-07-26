@@ -9,6 +9,7 @@ public class Main {
         File file = new File("test.txt");
         Scanner scan = new Scanner(file);
 
+<<<<<<< HEAD
         String s = "";
         while (scan.hasNextLine()) {
             s = scan.nextLine();
@@ -44,4 +45,17 @@ public class Main {
         }
         return result;
     }
+=======
+        while (scan.hasNext()) {
+            String s = scan.next();
+            if (!scan.hasNext()) {
+                System.out.println(s);
+                break;
+            }
+            System.out.print(s + "%20");
+        }
+        scan.close();
+    }
+
+>>>>>>> 11bb1b0dac0d081cd432908066bc30696202d683
 }
