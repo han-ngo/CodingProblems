@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-Mr     John Smith
-=======
 Mr    John Smith
->>>>>>> 11bb1b0dac0d081cd432908066bc30696202d683
