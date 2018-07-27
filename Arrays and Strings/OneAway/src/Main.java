@@ -15,10 +15,7 @@ import java.util.Scanner;
  *      pale, bake -> false
  */
 public class Main {
-    /* Questions:
-     *
-     */
-    public static final int MAX_LENGTH = 256;
+
     public static void main(String[] args) throws FileNotFoundException {
         File file = new File("test.txt");
         Scanner scan = new Scanner(file);
