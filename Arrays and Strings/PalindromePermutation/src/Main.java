@@ -29,7 +29,7 @@ public class Main {
         scan.close();
 
         for (String s : strings) {
-            System.out.println(isPalindromePermutation(s));
+            System.out.println(isPalindromePermutation_bit(s));
         }
     }
 
@@ -53,5 +53,28 @@ public class Main {
         }
 
         return true;
+    }
+
+    /* Time Complexity:  O(n) */
+    private static boolean isPalindromePermutation_bit(String s) {
+        int bitVector = 0;
+        s = s.toLowerCase().replaceAll("\\s+", "");
+
+        for (int i = 0; i < s.length(); i++) {
+            bitVector = toggle(bitVector, s.charAt(i));
+        }
+
+        return bitVector == 0 || ((bitVector - 1) & bitVector) == 0;
+    }
+
+    /* helper method */
+    private static int toggle(int bitVector, int index) {
+        int mask = 1 << index;
+        if ((bitVector & mask) == 0) {
+            bitVector |= mask;
+        } else {
+            bitVector &= ~mask;
+        }
+        return bitVector;
     }
 }
