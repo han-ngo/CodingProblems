@@ -5,7 +5,9 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
-
+    /* Questions:
+     *      ASCII or Unicode string
+     */
     public static void main(String[] args) throws FileNotFoundException {
         File file = new File("test.txt");
         Scanner scan = new Scanner(file);
