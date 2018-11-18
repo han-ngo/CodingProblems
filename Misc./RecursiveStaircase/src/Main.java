@@ -27,7 +27,7 @@ public class Main {
         System.out.println(numWaysDP(N, x) + " possible way(s) to climb the stairs");
     }
 
-    /* Time Complexity:  */
+    /* Time Complexity: O(N*|x|) */
     private static int numWaysDP(int N, ArrayList<Integer> x) {
         /* Base Cases */
         if (N == 0) {
@@ -50,7 +50,7 @@ public class Main {
         return counts[N];
     }
 
-    /* Time Complexity: O(|X|^N) --> very slow due to repeating computations */
+    /* Time Complexity: O(|x|^N) --> very slow due to repeating computations */
     private static int numWays(int N, ArrayList<Integer> x) {
         /* Base Cases */
         if (N == 0) {
